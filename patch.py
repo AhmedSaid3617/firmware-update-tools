@@ -21,7 +21,6 @@ def patch_bin(bin_path: Path, out_path: Path):
     """Read a binary, patch it, and save to new file."""
     
     with open(bin_path, "rb") as f:
-        #f.seek(512)
         data = bytearray(f.read())
     
     crc = Crc32(0x04C11DB7)
@@ -50,7 +49,6 @@ def main():
     bin_path = elf_to_bin(elf_path)
 
     # Output patched file
-    out_path = bin_path.with_name(Path.cwd().stem + "_patched.bin")
     out_path = Path("./out.bin")
     patch_bin(bin_path, out_path)
 

@@ -1,3 +1,6 @@
+## Acknowledgments
+## CRC32 implementation adapted from a community snippet on Reddit.
+
 # CRC32 class
 class Crc32:
     crc_table = {}

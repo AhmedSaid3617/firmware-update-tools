@@ -1,4 +1,4 @@
 .env
 .vscode
 *.bin
-*.txt
+__pycache__/
